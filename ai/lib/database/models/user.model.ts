@@ -1,6 +1,11 @@
 import { Schema, model, models } from "mongoose";
 
 const UserSchema = new Schema({
+    userId: {
+        type: String, 
+        required: true,
+        unique:true
+    },
     email: {
         type: String, 
         required: true,
@@ -39,3 +44,5 @@ const UserSchema = new Schema({
 })
 
 const User = models?.UserModal || model("User", UserSchema)
+
+export default User
