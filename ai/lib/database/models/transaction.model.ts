@@ -27,3 +27,5 @@ const TransactionSchema = new Schema({
 })
 
 const Transaction = models?.TransactionModel || model("Transaction", TransactionSchema)
+
+export default Transaction

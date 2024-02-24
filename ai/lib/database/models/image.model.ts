@@ -44,3 +44,5 @@ const ImageSchema = new Schema({
 
 
 const Image = models?.Image || model("Image",ImageSchema )
+
+export default Image

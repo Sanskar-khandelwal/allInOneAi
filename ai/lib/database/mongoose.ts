@@ -1,6 +1,7 @@
 import mongoose, {Mongoose} from "mongoose"
 
-const MONGO_URI = process.env.MONGO_URL
+const MONGO_URI = "mongodb+srv://dovesam04:SDFGT5Gyi2nmZ17k@cluster0.iywnj1s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+console.log("this is mongouri", MONGO_URI)
 
 interface MongooseConnection {
     conn: Mongoose | null;
