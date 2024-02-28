@@ -33,6 +33,7 @@ import { CustomField } from "./CustomField";
 import { useEffect, useState, useTransition } from "react";
 import { AspectRatioKey, debounce, deepMergeObjects } from "@/lib/utils";
 import MediaUploader from "./MediaUploader";
+import TransformedImage from "./TransformedImage";
 // import MediaUploader from "./MediaUploader";
 // import TransformedImage from "./TransformedImage";
 // import { updateCredits } from "@/lib/actions/user.actions";
@@ -233,6 +234,14 @@ const TransformationForm = ({
         type={type}
        />
       )}
+     />
+     <TransformedImage
+      image={image}
+      type={type}
+      title={form.getValues().title}
+      isTransforming={isTransforming}
+      setIsTransforming={setIsTransforming}
+      transformationConfig={transformationConfig}
      />
     </div>
     <div className="flex flex-col gap-4">
